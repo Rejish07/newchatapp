@@ -640,3 +640,17 @@ body {
   text-align: right;
   margin-top: 4px;
 }
+
+.message-sent .message-time {
+  text-align: right;
+  font-size: 0.7rem;
+  color: #666;
+  margin-top: 4px;
+}
+
+.message-received .message-time {
+  text-align: left;
+  font-size: 0.7rem;
+  color: #666;
+  margin-top: 4px;
+}
