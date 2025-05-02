@@ -1,6 +1,8 @@
 /**
  * author - rejishmahi@gmail.com
  * Note - comments are added for learning purpose make use of that.
+ * Credit - comments are done by AI.
+ * 
  * =============================
  * MAIN APPLICATION ENTRY POINT
  * =============================
