@@ -322,3 +322,314 @@ body {
     animation: spin 1s linear infinite;
     margin: 20px auto;
   }
+
+  /* (Previous CSS remains the same until .main-container) */
+
+
+
+
+/* New Group Chat Controls */
+.group-controls {
+  padding: 15px;
+  border-bottom: 1px solid #2a4365;
+  display: flex;
+  justify-content: space-between;
+}
+
+.create-group-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.create-group-btn:hover {
+  background-color: #3e8e41;
+}
+
+/* Chat Tabs */
+.chat-tabs {
+  display: flex;
+  border-bottom: 1px solid #2a4365;
+}
+
+.chat-tab {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.chat-tab.active {
+  background-color: #2a4365;
+  border-bottom: 2px solid #4CAF50;
+}
+
+/* (Rest of previous CSS remains the same) */
+
+/* Group Message Styles */
+.group-message {
+  margin-bottom: 15px;
+  max-width: 70%;
+}
+
+.group-message-sender {
+  font-size: 12px;
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+.group-message-content {
+  background-color: #E8F5E9;
+  border-radius: 18px;
+  padding: 8px 16px;
+  display: inline-block;
+  margin-top: 4px;
+}
+
+/* Group Info */
+.group-info {
+  padding: 10px;
+  background-color: #2a4365;
+  margin-bottom: 10px;
+}
+
+.group-members {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.member-tag {
+  background-color: #4CAF50;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 90%;
+}
+
+.modal-content h3 {
+  margin-top: 0;
+}
+
+.modal-content input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+}
+
+.member-selection {
+  max-height: 200px;
+  overflow-y: auto;
+  margin-bottom: 15px;
+}
+
+.member-option {
+  padding: 5px 0;
+}
+
+.modal-content button {
+  padding: 8px 15px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* .create-group-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 10px;
+  width: calc(100% - 20px);
+} */
+/* 
+.create-group-btn:hover {
+  background-color: #45a049;
+} */
+
+.create-group-btn i {
+  margin-right: 5px;
+}
+
+/* Add to your CSS */
+.chat-input-container.sending {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.chat-input-container.sending::after {
+  content: "Sending...";
+  position: absolute;
+  right: 50px;
+  color: #999;
+  font-size: 12px;
+}
+
+
+
+
+/* Modal Backdrop */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transform: translateY(-20px);
+  transition: transform 0.3s ease;
+}
+
+.modal.active .modal-content {
+  transform: translateY(0);
+}
+
+/* Modal Header */
+.modal-content h3 {
+  margin-top: 0;
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+/* Input Fields */
+.modal-content input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.modal-content input[type="text"]:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+/* Member Selection Section */
+.member-selection {
+  max-height: 200px;
+  overflow-y: auto;
+  margin-bottom: 25px;
+  border: 1px solid #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.member-selection h4 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #7f8c8d;
+}
+
+.member-option {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.member-option:last-child {
+  border-bottom: none;
+}
+
+.member-option input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.2);
+}
+
+.member-option label {
+  cursor: pointer;
+  color: #34495e;
+  font-size: 0.95rem;
+}
+
+/* Buttons */
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.modal-button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: none;
+  font-size: 0.9rem;
+}
+
+.modal-button.primary {
+  background-color: #3498db;
+  color: white;
+}
+
+.modal-button.primary:hover {
+  background-color: #2980b9;
+}
+
+.modal-button.secondary {
+  background-color: #ecf0f1;
+  color: #7f8c8d;
+}
+
+.modal-button.secondary:hover {
+  background-color: #bdc3c7;
+  color: #2c3e50;
+}
